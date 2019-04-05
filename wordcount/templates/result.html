@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>WordCount</title>
+</head>
+<body>
+<div align="center">
+    <h3> 입력한 텍스트
+    <br>
+    {{ inputtext }}
+    </h3>
+<table border="1">
+    <tr>
+        <th>Word</th> <th>Count</th>
+    </tr>
+    {% for word, frequency in dictionary %}
+        <tr>
+            <th>{{word}}</th> <th>{{frequency}}</th>
+        </tr>
+    {%endfor%}
+
+    </table>
+
+
+<p><button type="button" onclick="location.href='/about'">돌아가기</button></p>
+</div>
+</body>
+</html>
